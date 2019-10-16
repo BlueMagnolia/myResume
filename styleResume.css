@@ -155,3 +155,26 @@ img.avatar {
 .reference-details {
     margin-bottom: 20px;
 }
+
+@media only screen and (max-width : 600px) {
+    section {
+        grid-template-columns: 1fr;
+    }
+    .links, .job-title-container {
+        flex-direction: column;
+    }
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .interests-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .interests-container img {
+        margin-right: 32px;
+        margin-bottom: 16px;
+    }
+    img.avatar {
+        width: 260px;
+    }
+}

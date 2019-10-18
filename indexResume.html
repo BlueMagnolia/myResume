@@ -5,42 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nutthida's eResume</title>
-    <!-- Link | Google font -->
+    <!-- LINK | Google font -->
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleResume.css">
-    
+    <!-- LINK | Icon add and trash -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+    
     <div class="container">
         <!----------------------== PART | Name and contact ==------------------------->
         <section>
-            <!-- BUTTON | Change background color -->
             <div>
                 <!-- Your Avatar Image -->
                 <div><img src="IMG/line_213017251118841.jpg" alt="avatar" class="avatar"></div>
             </div>
             <div>
-                <!-- Your Name -->
-                <div class="my-name">Nutthida Yusenas</div>
-                <!-- INPUT & BUTTON | Change name -->
-                <div class="my-title">Former student, biomedical engineering</div>
-                <!-- EMMET Abb. | .link-item*3 + Enter -->
-                <!-- Your website -->
-                <div class="link">
-                    <!-- Yor website  -->
-                    <div class="link-item"><a href="#">nithanyamratri.com</a></div>
-                    <!-- Your email -->
-                    <div class="link-item"><a href="#">nut.yusenas@gmail.com</a></div>
-                    <!-- Your phone number -->
-                    <div class="link-item"><a href="#">06x-xxx-xx99</a> </div>
+                <!-- BUTTON | Change background color -->
+                <div class="changeBtn">
+                    <button onclick="changedBgColor()" class="btn btn1">Switch Color</button>
                 </div>
+            <!-- Your Name -->
+            <div class="my-name">
+                <!-- Double click for change name -->
+                <a ondblclick="typeNewName()" class="newName" href="#">
+                    <span id="name" title="Double Click for change my name ^^">Nutthida Yusenas</span>
+                </a>
+                <!-- Adding nickname -->
+                <span>(Nut)</span>
+            </div>
+            <div class="my-title">Former student, biomedical engineering</div>
+            <!-- EMMET Abb. | .link-item*3 + Enter -->
+            <!-- Your website -->
+            <div class="link">
+                <!-- Yor website  -->
+                <div class="link-item"><a href="#" title="It's just a fake website :P">anonymous.com</a></div>
+                <!-- Your email -->
+                <div class="link-item"><a href="#">nut.yusenas@gmail.com</a></div>
+                <!-- Your phone number -->
+                <div class="link-item"><a href="#">06x-xxx-xx99</a> </div>
+            </div>
             <!-- END LINK -->
-                <p>
+                <!-- <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum laboriosam quo, 
                     voluptatem et alias corrupti eaque sit nobis repudiandae. Ad ex commodi sapiente dolorem ea 
                     officia temporibus qui ipsum, aut reprehenderit nihil! Deleniti veniam, 
                     libero quaerat dicta quidem natus!
-                </p>
+                </p> -->
             </div>
         </section>
         <!----------------------== PART | Experience ==------------------------->
@@ -59,11 +70,10 @@
                         </div>
                     </div> 
                     <!-- END | Job title container -->
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum laboriosam quo,
-                        voluptatem et alias corrupti eaque sit nobis repudiandae. Ad ex commodi sapiente dolorem ea
-                        officia temporibus qui ipsum, aut reprehenderit nihil! Deleniti veniam,
-                        libero quaerat dicta quidem natus!
-                    </p>
+                    <p>
+                        - Inspected, cleaned, tested and calibrated medical equipment before stalling.
+                        <br>
+                        - Diagnosed cause of problems and completed repairs. </p>
                 </div>
                 <!-- END | Job  -->
                 <!-- CAN | Add more your experience work -->
@@ -87,10 +97,9 @@
                     </div>
                     <!-- END | Job title container -->
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum laboriosam quo,
-                        voluptatem et alias corrupti eaque sit nobis repudiandae. Ad ex commodi sapiente dolorem ea
-                        officia temporibus qui ipsum, aut reprehenderit nihil! Deleniti veniam,
-                        libero quaerat dicta quidem natus!
+                        - Coursework in Writing, Digital planing, Cyber law
+                        and Public speaking <br>
+                        - Created managing-life decision game (prototype)
                     </p>
                 </div>
                 <!-- END | Educate -->
@@ -106,11 +115,14 @@
                         </div>
                     </div>
                     <!-- END | Job title container -->
-                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum laboriosam quo,
-                        voluptatem et alias corrupti eaque sit nobis repudiandae. Ad ex commodi sapiente dolorem ea
-                        officia temporibus qui ipsum, aut reprehenderit nihil! Deleniti veniam,
-                        libero quaerat dicta quidem natus!
-                    </p> -->
+                    <p>
+                    Junior year - Preliminary Study to Detect Fetal
+                    Movement by using Acceleration sensor and MEMS
+                    Microphone<br>
+                    Senior year - Application of Template Matching for
+                    Extracting Information on Labels of Prescription
+                    Medication: Dosage and Frequency of Use
+                    </p>
                 </div>
                 <!-- END | Educate -->
             </div>
@@ -126,20 +138,20 @@
                         <li>Analysis</li>
                         <li>Python</li>
                         <li>MATLAB</li>
+                        <li>Intermediate english</li>
                     </ul>
                     
-                    <ul>
-                        Want myskill more?
-                        Type it, Guys ^^
-                        <!-- INPUT & BUTTON | Add more skill -->
-                    </ul>
+                    <!-- ADD SKILL -->
+                    <p>If you want my skill more?<br>Type it, please ^^</p>
+                    <div class="add">
+                        <span class="add-icon fa fa-plus"></span>
+                        <input type="text" id="inputAdd" placeholder="Write text here...">
+                        <button id="send">Add</button>
+                        <ul id="list">
+                            <li>Skill number one <span class="delete fa fa-trash-o" onclick="myFunc(this)"></span></li>
+                        </ul>
+                    </div>
 
-                    <ul>
-                        <li>Skill One</li>
-                        <li>Skill Two</li>
-                        <li>Skill Three</li>
-                        <li>Skill Four</li>
-                    </ul>
                 </div>
                 <!-- END | skill container -->
                 <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum laboriosam quo,
@@ -177,6 +189,6 @@
             </div>
         </section>
     </div>
-    
+    <script src="scriptResume.js"></script>
 </body>
 </html>

@@ -28,6 +28,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* ------------------------------------------------ */
+/*                      PAPER                       */
+/* ------------------------------------------------ */
 .container {
     max-width: 960px;
     margin: 40px auto;
@@ -35,6 +38,9 @@ a:hover {
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+/* ------------------------------------------------ */
+/*                  LINE SECTION                    */
+/* ------------------------------------------------ */
 section {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -102,7 +108,7 @@ img.avatar {
     line-height: 1.2;
 }
 /* ------------------------------------------------ */
-/*                     EXPERIENCE                   */
+/*                     EDUCATION                    */
 /* ------------------------------------------------ */
 .educate {
     padding-bottom: 24px;
@@ -155,7 +161,9 @@ img.avatar {
 .reference-details {
     margin-bottom: 20px;
 }
-
+/* ------------------------------------------------ */
+/*                  RESPONSIVE                      */
+/* ------------------------------------------------ */
 @media only screen and (max-width : 600px) {
     section {
         grid-template-columns: 1fr;
@@ -177,4 +185,89 @@ img.avatar {
     img.avatar {
         width: 260px;
     }
+}
+/* ------------------------------------------------ */
+/*             CHANGED COLOR BUTTON                 */
+/* ------------------------------------------------ */
+.btn {
+    background: none;
+    border: 2px solid #000000;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    min-width: 100px;
+    font-size: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+}
+.btn:hover {
+    color: #ffffff;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.btn1::before {
+    transform: scaleX(0);
+}
+.btn1:hover::before {
+    transform: scaleX(1);
+}
+/* POSITION button .btn1 */
+.btn1 {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    padding: 5px;
+    background: white;
+}
+/* ------------------------------------------------ */
+/*             ADD OR DELETED MY SKILL              */
+/* ------------------------------------------------ */
+
+input#inputAdd {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+input#inputAdd {
+    background: whitesmoke;
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+button#send {
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    width: 35px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #236fb2;
+    color: #fff;
+    font-size: 12px;
+}
+button#send:hover {
+    background: #1a5181;
+}
+.list li {
+    font-size: 15px;
 }
